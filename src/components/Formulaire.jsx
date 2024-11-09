@@ -5,6 +5,8 @@ function Formulaire() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
 
+  const [numbers, setNumbers] = useState([1, 2, 3, 4]);
+
   const handelSubmit = (e) => {
     e.preventDefault();
 
@@ -13,6 +15,14 @@ function Formulaire() {
     }
 
     console.log(`Name: ${name}, Age: ${age}`);
+
+    //Méthode 1:
+    const newCopyNumbers = [...numbers];
+    newCopyNumbers.push(5);
+    setNumbers(newCopyNumbers);
+
+    //Méthode 2:
+    setNumbers([...numbers, 5]);
   };
 
   //Code JSX;

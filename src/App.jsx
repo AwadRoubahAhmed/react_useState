@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Formulaire from "./components/Formulaire";
+import Clock from "./components/Clock";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -53,6 +54,7 @@ function App() {
         </h3>
         <Formulaire />
       </div>
+      <Clock/>
     </div>
   );
 }
